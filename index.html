@@ -2,7 +2,7 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
 	<title>Looking into Your Speech: Learning Cross-modal Affinity for Audio-visual Speech Separation</title>
-	<meta name="author" content="SLV-lab">
+	<meta name="author" content="CaffNet">
 
 	<link href="./bootstrap.min.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
@@ -20,7 +20,11 @@
       <div class="header">
         <div style="font-size: 10px">
         <h1> <center> Looking into Your Speech: Learning Cross-modal Affinity for Audio-visual Speech Separation </center> </h1>
-        <h4 style="color: #517CB9; font-size: 30px"> <center> <a href="http://cvpr2021.thecvf.com/"> <img src="./cvpr2021logo.jpg" style="max-width:25%"></a> </center></center></h4>
+        <h4 style="color: #517CB9; font-size: 30px"> 
+		<center> 
+			<a href="http://cvpr2021.thecvf.com/"> <img src="./cvpr2021logo.jpg" style="max-width:25%"></a> 
+		</center>
+	</h4>
         </div>
       </div>
 
@@ -48,7 +52,7 @@
         <h3>Abstract</h3>
 	<img src="./fig1_main.png" style="max-width:100%;padding-right:20px;" align="center">
         <p style="text-align: justify;">
-        <img src="./MNAD_files/teaser.png" style="max-width:55%;float:right;padding-left:20px;">The objective of this paper is to separate a target speaker's speech from a mixture of two speakers using a deep audio-visual speech separation network. Unlike previous works that used lip movement on video clips or pre-enrolled speaker information as an auxiliary conditional feature, we use a single face image of the target speaker. In this task, the conditional feature is obtained from facial appearance in cross-modal biometric task, where audio and visual identity representations are shared in latent space. Learnt identities from facial images enforce the network to isolate matched speakers and extract the voices from mixed speech. It solves the permutation problem caused by swapped channel outputs, frequently occurred in speech separation tasks. The proposed method is far more practical than video-based speech separation since user profile images are readily available on many platforms. Also, unlike speaker-aware separation methods, it is applicable on separation with unseen speakers who have never been enrolled before. We show strong qualitative and quantitative results on challenging real-world examples. 
+        The objective of this paper is to separate a target speaker's speech from a mixture of two speakers using a deep audio-visual speech separation network. Unlike previous works that used lip movement on video clips or pre-enrolled speaker information as an auxiliary conditional feature, we use a single face image of the target speaker. In this task, the conditional feature is obtained from facial appearance in cross-modal biometric task, where audio and visual identity representations are shared in latent space. Learnt identities from facial images enforce the network to isolate matched speakers and extract the voices from mixed speech. It solves the permutation problem caused by swapped channel outputs, frequently occurred in speech separation tasks. The proposed method is far more practical than video-based speech separation since user profile images are readily available on many platforms. Also, unlike speaker-aware separation methods, it is applicable on separation with unseen speakers who have never been enrolled before. We show strong qualitative and quantitative results on challenging real-world examples. 
         </p>  
       </div>
       <div class="row">
@@ -56,7 +60,7 @@
         <p style="text-align: justify;">
         <img src="./fig1_main.png" style="max-width:65%;padding-right:20px;" align="left">
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        Overview of our framework for reconstructing a video frame. Our model mainly consists of three parts: an encoder, a memory module, and a decoder. The encoder extracts a query map $\mathbf{q}_t$ of size $H\times W \times C$ from an input video frame ${\bf{I}}_t$ at time $t$. The memory module performs reading and updating items $\mathbf{p}_m$ of size $1\times 1\times C$ using queries $\mathbf{q}_t^k$ of size $1\times 1\times C$, where the numbers of items and queries are $M$ and $K$, respectively, and $K=H\times W$. The query map $\mathbf{q}_t$ is concatenated with the aggregated items $\hat {\bf{p}}_t$. The decoder then inputs them to reconstruct the video frame $\hat {\bf{I}}_t$. For the prediction task, we input four successive video frames to predict the fifth one.
+	Overall network configuration: (1) encoding individual audio and visual features; (2) learning cross-modal affinity; (3) predicting spectrogram soft mask $\mathbf{M}$ to reconstruct target speech $\mathbf{\hat{Y}}$. Red dotted region means the magnitude operation processing.
         </p>
         
       </div>
