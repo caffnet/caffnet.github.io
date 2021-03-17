@@ -56,16 +56,16 @@
         </p>  
       </div>
       <div class="row">
-      	<h3>Network Configruation</h3>
+      	<h3>Network Configuration</h3>
         <p style="text-align: justify;">
         <img src="./fig_network.PNG" style="max-width:100%;" align="center">
 	Overall network configuration: (1) encoding individual audio and visual features; (2) learning cross-modal affinity; (3) predicting spectrogram soft mask $\mathbf{M}$ to reconstruct target speech $\mathbf{\hat{Y}}$. Red dotted region means the magnitude operation processing.
-	<br>
+	<br><br>
 		<div class="row">
-			<img src="./fig_caffnet.PNG" style="max-width:50%;padding-left:10px;padding-right:10px;" align="center"><br>
+			<img class="center" src="./fig_caffnet.PNG" style="max-width:50%;padding-left:10px;padding-right:10px;" align="center"><br>
 			It illustrates the detail of the red-dotted block of overall network. It takes speech feature $\mathbf{\bar{S}}$ and video feature $\mathbf{\bar{V}}$ to calculate the affinity matrix $\mathbf{A}$ that serves to transfer the visual features aligned to audio features. The cross-modal identity matrix $\mathbf{\Gamma}$ regularizes the initially obtained affinity matrix to maintain global correspondence.
 			<br><br>
-			<img class="center" src="./fig_pattern.PNG" style="max-width:50%;padding-left:10px;padding-right:10px;" align="center"><br>
+			<img class="center" src="./fig_pattern.PNG" style="max-width:50%;padding-left:10px;padding-right:10px;"><br>
 			Intuitively, when input speech contains only one voice, affinity matrix in (a) is obtained by matching a target face and speech in CaffNet. In practice, when input speech is mixture sound, initial affinity is calculated as shown in (b) containing erroneous matching results. Final affinity in (c) is estimated with the help of affinity regularization.
 		</div>
         <br>
