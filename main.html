@@ -35,19 +35,19 @@
 		<li><a href="https://easy00.github.io">Jiyoung Lee</a>*</li>
 		<li><a href="https://soowhanchung.github.io/">Soo-Whan Chung</a>*</li>
 		<li>Sunok Kim</li>
-		<li><a href="https://dsp.yonsei.ac.kr/">Hong-Goo Kang</a>**</li>
-		<li><a href="https://diml.yonsei.ac.kr/">Kwanghoon Sohn</a>**</li>
+		<li><a href="https://dsp.yonsei.ac.kr/">Hong-Goo Kang</a><span style="text-transform:uppercase">&#9841;</span></li>
+		<li><a href="https://diml.yonsei.ac.kr/">Kwanghoon Sohn</a><span style="text-transform:uppercase">&#9841;</span></li>
       	</ul>
       	</div>
       	<p style="text-align: justify;">* equal contribution</p>    
-      	<p style="text-align: justify;">** co-corresponding authors</p>    
+      	<p style="text-align: justify;"><span style="text-transform:uppercase">&#9841;</span> co-corresponding authors</p>    
 
       </div>
 
       <div class="row">
         <h3>Abstract</h3>
         <p style="text-align: justify;">
-        <img src="./MNAD_files/teaser.png" style="max-width:55%;float:right;padding-left:20px;">We address the problem of anomaly detection, that is, detecting anomalous events in a video sequence. Anomaly detection methods based on convolutional neural networks (CNNs) typically leverage proxy tasks, such as reconstructing input video frames, to learn models describing normality without seeing anomalous samples at training time, and quantify the extent of abnormalities using the reconstruction error at test time. The main drawbacks of these approaches are that they do not consider the diversity of normal patterns explicitly, and the powerful representation capacity of CNNs allows to reconstruct abnormal video frames. To address this problem, we present an unsupervised learning approach to anomaly detection that considers the diversity of normal patterns explicitly, while lessening the representation capacity of CNNs. To this end, we propose to use a memory module with a new update scheme where items in the memory record prototypical patterns of normal data. We also present novel feature compactness and separateness losses to train the memory, boosting the discriminative power of both memory items and deeply learned features from normal data. Experimental results on standard benchmarks demonstrate the effectiveness and efficiency of our approach, which outperforms the state of the art.
+        <img src="./MNAD_files/teaser.png" style="max-width:55%;float:right;padding-left:20px;">The objective of this paper is to separate a target speaker's speech from a mixture of two speakers using a deep audio-visual speech separation network. Unlike previous works that used lip movement on video clips or pre-enrolled speaker information as an auxiliary conditional feature, we use a single face image of the target speaker. In this task, the conditional feature is obtained from facial appearance in cross-modal biometric task, where audio and visual identity representations are shared in latent space. Learnt identities from facial images enforce the network to isolate matched speakers and extract the voices from mixed speech. It solves the permutation problem caused by swapped channel outputs, frequently occurred in speech separation tasks. The proposed method is far more practical than video-based speech separation since user profile images are readily available on many platforms. Also, unlike speaker-aware separation methods, it is applicable on separation with unseen speakers who have never been enrolled before. We show strong qualitative and quantitative results on challenging real-world examples. 
         </p>  
       </div>
       <div class="row">
